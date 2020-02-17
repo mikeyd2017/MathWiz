@@ -54,7 +54,7 @@ namespace MathWiz.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("QuestionID,Val1,Val2,Answer")] Question question)
+        public async Task<IActionResult> Create([Bind("QuestionID,Val1,Val2,Answer,Sign,Correct")] Question question)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace MathWiz.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("QuestionID,Val1,Val2,Answer")] Question question)
+        public async Task<IActionResult> Edit(int id, [Bind("QuestionID,Val1,Val2,Answer,Sign,Correct")] Question question)
         {
             if (id != question.QuestionID)
             {

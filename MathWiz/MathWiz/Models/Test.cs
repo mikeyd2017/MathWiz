@@ -10,5 +10,7 @@ namespace MathWiz.Models
         public int TestID { get; set; }
         public int StudentID { get; set; }
         public decimal Grade { get; set; }
+
+
     }
 }

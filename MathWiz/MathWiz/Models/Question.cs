@@ -8,6 +8,8 @@ namespace MathWiz.Models
     public class Question
     {
         public int QuestionID { get; set; }
+        public int StudentID { get; set; }
+        public int TestID { get; set; }
         public decimal Val1 { get; set; }
         public decimal Val2 { get; set; }
         public decimal Answer { get; set; }
