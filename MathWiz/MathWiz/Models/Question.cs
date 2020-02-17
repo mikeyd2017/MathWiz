@@ -13,6 +13,8 @@ namespace MathWiz.Models
         public decimal Val1 { get; set; }
         public decimal Val2 { get; set; }
         public decimal Answer { get; set; }
+
+        public decimal StudentAnswer { get; set; }
         public string Sign { get; set; }
         public bool Correct { get; set; }
 
