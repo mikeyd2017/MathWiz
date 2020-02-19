@@ -22,6 +22,30 @@
                 <input asp-for="Grade" class="form-control" />
                 <span asp-validation-for="Grade" class="text-danger"></span>
             </div>
+            <div ="form-group">
+                <label asp-for="Questions.First().Val1" class="control-label"></label>
+                <input asp-for="Questions.First().Val1" name="Test.Questions[0].Val1" class="form-control" />
+
+
+            </div>
+            <div ="form-group">
+                <label asp-for="Questions.First().Sign" class="control-label"></label>
+                <input asp-for="Questions.First().Sign"  name="Test.Questions[0].Sign" class="form-control" />
+
+
+            </div>
+            <div ="form-group">
+                <label asp-for="Questions.First().Val2" class="control-label"></label>
+                <input asp-for="Questions.First().Val2" name="Test.Questions[0].Val2" class="form-control" />
+
+
+            </div>
+            <div ="form-group">
+                <label asp-for="Questions.First().Answer" class="control-label"></label>
+                <input asp-for="Questions.First().Answer" name="Test.Questions[0].Answer" class="form-control" />
+
+
+            </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-default" />
             </div>

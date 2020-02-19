@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using MathWiz.Data;
 using MathWiz.Models;
 
-namespace MathWiz.Controllers
+namespace MathWiz.Views
 {
     public class TestsController : Controller
     {
@@ -54,13 +54,20 @@ namespace MathWiz.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("TestID,QuestionID,StudentID,Grade")] Test test)
+        public async Task<IActionResult> Create(Test test)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(test);
+                List<Question> questions = test.Questions.ToList<Question>();
+                for (int i = 0; i < questions.Count() - 1; i++)
+                {
+                    _context.Add(questions[i]);
+                }
+                
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
+
             }
             return View(test);
         }
@@ -86,7 +93,7 @@ namespace MathWiz.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("TestID,QuestionID,StudentID,Grade")] Test test)
+        public async Task<IActionResult> Edit(int id, [Bind("TestID,StudentID,Grade")] Test test)
         {
             if (id != test.TestID)
             {

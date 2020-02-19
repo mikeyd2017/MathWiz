@@ -11,6 +11,8 @@ namespace MathWiz.Models
         public int StudentID { get; set; }
         public decimal Grade { get; set; }
 
+        public virtual ICollection<Question> Questions { get; set; }
+
 
     }
 }
