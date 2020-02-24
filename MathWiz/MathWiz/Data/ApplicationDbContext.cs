@@ -12,6 +12,7 @@ namespace MathWiz.Data
     {
         public DbSet<Question> Question { get; set; }
         public DbSet<Test> Test { get; set; }
+       // public DbSet<Answer> Answer { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {

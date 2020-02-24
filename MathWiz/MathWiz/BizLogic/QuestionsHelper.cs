@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MathWiz.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,6 +8,26 @@ namespace MathWiz.BizLogic
 {
     public class QuestionsHelper
     {
+        List<Question> qlist = new List<Question>()
+        {
+            new Question(){Val1=1,Val2=2,Answer=3},
+            new Question(){Val1=1,Val2=2,Answer=3},
+            new Question(){Val1=1,Val2=2,Answer=3},
+            new Question(){Val1=1,Val2=2,Answer=3},
+            new Question(){Val1=1,Val2=2,Answer=3},
+            new Question(){Val1=1,Val2=2,Answer=3},
+            new Question(){Val1=1,Val2=2,Answer=3},
+            new Question(){Val1=1,Val2=2,Answer=3},
+            new Question(){Val1=1,Val2=2,Answer=3},
+            new Question(){Val1=1,Val2=2,Answer=3},
+        };
+
+        public List<Question> getQuestions()
+        {
+            
+            return qlist;
+        }
+        
         public double Addition(double val1, double val2) {
             return val1 + val2;
         }

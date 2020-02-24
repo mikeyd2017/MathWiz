@@ -156,5 +156,10 @@ namespace MathWiz.Views
         {
             return _context.Test.Any(e => e.TestID == id);
         }
+
+        public IActionResult TakeQuiz()
+        {
+            return View();
+        }
     }
 }
