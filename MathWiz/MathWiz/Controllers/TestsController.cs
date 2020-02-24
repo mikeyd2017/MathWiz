@@ -58,12 +58,13 @@ namespace MathWiz.Views
         {
             if (ModelState.IsValid)
             {
-                _context.Add(test);
                 List<Question> questions = test.Questions.ToList<Question>();
                 for (int i = 0; i < questions.Count() - 1; i++)
                 {
                     _context.Add(questions[i]);
                 }
+                _context.Add(test);
+                
                 
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

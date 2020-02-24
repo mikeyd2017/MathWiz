@@ -5,11 +5,10 @@ using System.Threading.Tasks;
 
 namespace MathWiz.Models
 {
-    public class Test
+    public class Assignment
     {
-        public int TestID { get; set; }
-        public virtual ICollection<Question> Questions { get; set; }
-
+        public Test Test { get; set; }
+        //public Student student { get; set; }
 
     }
 }
