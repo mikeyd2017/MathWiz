@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+ystem;
 using System.Collections.Generic;
 using System.Text;
 using MathWiz.Models;
@@ -7,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MathWiz.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext<Student>
     {
         public DbSet<Question> Question { get; set; }
         public DbSet<Test> Test { get; set; }
