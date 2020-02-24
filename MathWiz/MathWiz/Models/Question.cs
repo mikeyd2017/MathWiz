@@ -15,5 +15,7 @@ namespace MathWiz.Models
         public string Sign { get; set; }
         public bool Correct { get; set; }
 
+        public virtual Test Test { get; set; }
+
     }
 }
